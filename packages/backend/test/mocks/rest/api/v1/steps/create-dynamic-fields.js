@@ -5,9 +5,9 @@ const createDynamicFieldsMock = async () => {
       key: 'botName',
       type: 'string',
       required: true,
-      value: 'Automatisch',
+      value: 'automatisch',
       description:
-        'Specify the bot name which appears as a bold username above the message inside Slack. Defaults to Automatisch.',
+        'Specify the bot name which appears as a bold username above the message inside Slack. Defaults to automatisch.',
       variables: true,
     },
     {

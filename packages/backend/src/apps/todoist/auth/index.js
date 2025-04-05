@@ -25,7 +25,7 @@ export default {
       readOnly: false,
       value: null,
       placeholder: null,
-      description: 'Name your connection (only used for Automatisch UI).',
+      description: 'Name your connection (only used for automatisch UI).',
       clickToCopy: false,
     },
     {

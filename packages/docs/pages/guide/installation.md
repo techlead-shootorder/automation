@@ -6,7 +6,7 @@ We have installation guides for docker compose and docker setup at the moment, b
 
 :::tip
 
-You can use `user@automatisch.io` email address and `sample` password to login to Automatisch. Please do not forget to change your email and password from the settings page.
+You can use `user@automatisch.io` email address and `sample` password to login to automatisch. Please do not forget to change your email and password from the settings page.
 
 :::
 
@@ -27,11 +27,11 @@ cd automatisch
 docker compose up
 ```
 
-✌️ That's it; you have Automatisch running. Let's check it out by browsing [http://localhost:3000](https://localhost:3000)
+✌️ That's it; you have automatisch running. Let's check it out by browsing [http://localhost:3000](https://localhost:3000)
 
 ### Upgrade with Docker Compose
 
-If you want to upgrade the Automatisch version with docker compose, first you need to pull the main branch of Automatisch repository.
+If you want to upgrade the automatisch version with docker compose, first you need to pull the main branch of automatisch repository.
 
 ```bash
 git pull origin main
@@ -45,7 +45,7 @@ docker compose up --force-recreate --build
 
 ## Docker
 
-Automatisch comes with two services which are `main` and `worker`. They both use the same image and need to have the same environment variables except for the `WORKER` environment variable which is set to `true` for the worker service.
+automatisch comes with two services which are `main` and `worker`. They both use the same image and need to have the same environment variables except for the `WORKER` environment variable which is set to `true` for the worker service.
 
 ::: warning
 We give the sample environment variable files for the setup but you should adjust them to include your own values.
@@ -54,13 +54,13 @@ We give the sample environment variable files for the setup but you should adjus
 To run the main:
 
 ```bash
-docker run --env-file=./.env automatischio/automatisch
+docker run --env-file=./.env Automatischio/automatisch
 ```
 
 To run the worker:
 
 ```bash
-docker run --env-file=./.env -e WORKER=true automatischio/automatisch
+docker run --env-file=./.env -e WORKER=true Automatischio/automatisch
 ```
 
 ::: details .env
@@ -110,4 +110,4 @@ If you need to change any other environment variables for your production setup,
 
 ## Let's discover!
 
-If you see any problems while installing Automatisch, let us know via [github issues](https://github.com/automatisch/automatisch/issues) or our [discord server](https://discord.gg/dJSah9CVrC).
+If you see any problems while installing automatisch, let us know via [github issues](https://github.com/automatisch/automatisch/issues) or our [discord server](https://discord.gg/dJSah9CVrC).

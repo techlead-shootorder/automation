@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import api from 'helpers/api';
 
-export default function useAutomatischInfo() {
+export default function useautomatischInfo() {
   const query = useQuery({
     /**
      * The data doesn't change by user actions, but only by server deployments.

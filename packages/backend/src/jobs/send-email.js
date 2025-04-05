@@ -6,9 +6,9 @@ import appConfig from '../config/app.js';
 export const sendEmailJob = async (job) => {
   const { email, subject, template, params } = job.data;
 
-  if (isCloudSandbox() && !isAutomatischEmail(email)) {
+  if (isCloudSandbox() && !isautomatischEmail(email)) {
     logger.info(
-      'Only Automatisch emails are allowed for non-production environments!'
+      'Only automatisch emails are allowed for non-production environments!'
     );
 
     return;
@@ -26,6 +26,6 @@ const isCloudSandbox = () => {
   return appConfig.isCloud && !appConfig.isProd;
 };
 
-const isAutomatischEmail = (email) => {
+const isautomatischEmail = (email) => {
   return email.endsWith('@automatisch.io');
 };

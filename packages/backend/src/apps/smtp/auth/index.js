@@ -11,7 +11,7 @@ export default {
       readOnly: false,
       value: null,
       placeholder: null,
-      description: 'The host information Automatisch will connect to.',
+      description: 'The host information automatisch will connect to.',
       docUrl: 'https://automatisch.io/docs/smtp#host',
       clickToCopy: false,
     },

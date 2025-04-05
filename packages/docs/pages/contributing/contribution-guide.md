@@ -1,6 +1,6 @@
 # Contribution Guide
 
-We are happy that you want to contribute to Automatisch. We will assist you in the contribution process. This guide will help you to get started.
+We are happy that you want to contribute to automatisch. We will assist you in the contribution process. This guide will help you to get started.
 
 ## We develop with GitHub
 

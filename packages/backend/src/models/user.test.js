@@ -911,7 +911,7 @@ describe('User model', () => {
   });
 
   describe('isAllowedToRunFlows', () => {
-    it('should return true when Automatisch is self hosted', async () => {
+    it('should return true when automatisch is self hosted', async () => {
       const user = new User();
 
       vi.spyOn(appConfig, 'isSelfHosted', 'get').mockReturnValue(true);
@@ -953,7 +953,7 @@ describe('User model', () => {
   });
 
   describe('inTrial', () => {
-    it('should return false when Automatisch is self hosted', async () => {
+    it('should return false when automatisch is self hosted', async () => {
       const user = new User();
 
       vi.spyOn(appConfig, 'isSelfHosted', 'get').mockReturnValue(true);
@@ -1047,7 +1047,7 @@ describe('User model', () => {
       expect(await user.hasActiveSubscription()).toBe(false);
     });
 
-    it('should return false if Automatisch is not a cloud installation', async () => {
+    it('should return false if automatisch is not a cloud installation', async () => {
       const user = new User();
 
       vi.spyOn(appConfig, 'isCloud', 'get').mockReturnValue(false);
@@ -1582,7 +1582,7 @@ describe('User model', () => {
 
   it('lowercaseEmail should lowercase the user email', () => {
     const user = new User();
-    user.email = 'USER@AUTOMATISCH.IO';
+    user.email = 'USER@automatisch.IO';
 
     user.lowercaseEmail();
 
@@ -1590,7 +1590,7 @@ describe('User model', () => {
   });
 
   describe('createUsageData', () => {
-    it('should create usage data if Automatisch is a cloud installation', async () => {
+    it('should create usage data if automatisch is a cloud installation', async () => {
       vi.useFakeTimers();
 
       vi.spyOn(appConfig, 'isCloud', 'get').mockReturnValue(true);
@@ -1610,7 +1610,7 @@ describe('User model', () => {
       vi.useRealTimers();
     });
 
-    it('should not create usage data if Automatisch is not a cloud installation', async () => {
+    it('should not create usage data if automatisch is not a cloud installation', async () => {
       vi.spyOn(appConfig, 'isCloud', 'get').mockReturnValue(false);
 
       const user = await createUser({
@@ -1801,7 +1801,7 @@ describe('User model', () => {
     it('should lowercase the user email', async () => {
       const user = await createUser({
         fullName: 'Sample user',
-        email: 'USER@AUTOMATISCH.IO',
+        email: 'USER@automatisch.IO',
       });
 
       expect(user.email).toBe('user@automatisch.io');
@@ -1818,7 +1818,7 @@ describe('User model', () => {
       expect(await user.login('sample-password')).toBe(true);
     });
 
-    it('should start trial period if Automatisch is a cloud installation', async () => {
+    it('should start trial period if automatisch is a cloud installation', async () => {
       vi.spyOn(appConfig, 'isCloud', 'get').mockReturnValue(true);
 
       const startTrialPeriodSpy = vi.spyOn(User.prototype, 'startTrialPeriod');
@@ -1831,7 +1831,7 @@ describe('User model', () => {
       expect(startTrialPeriodSpy).toHaveBeenCalledOnce();
     });
 
-    it('should not start trial period if Automatisch is not a cloud installation', async () => {
+    it('should not start trial period if automatisch is not a cloud installation', async () => {
       vi.spyOn(appConfig, 'isCloud', 'get').mockReturnValue(false);
 
       const startTrialPeriodSpy = vi.spyOn(User.prototype, 'startTrialPeriod');
@@ -1867,7 +1867,7 @@ describe('User model', () => {
         email: 'user@automatisch.io',
       });
 
-      await user.$query().patchAndFetch({ email: 'NEW_EMAIL@AUTOMATISCH.IO' });
+      await user.$query().patchAndFetch({ email: 'NEW_EMAIL@automatisch.IO' });
 
       expect(user.email).toBe('new_email@automatisch.io');
     });

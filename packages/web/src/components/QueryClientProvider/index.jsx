@@ -24,7 +24,7 @@ const queryClient = new QueryClient({
   },
 });
 
-export default function AutomatischQueryClientProvider({ children }) {
+export default function automatischQueryClientProvider({ children }) {
   return (
     <QueryClientProvider client={queryClient}>
       {children}
@@ -33,6 +33,6 @@ export default function AutomatischQueryClientProvider({ children }) {
   );
 }
 
-AutomatischQueryClientProvider.propTypes = {
+automatischQueryClientProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };

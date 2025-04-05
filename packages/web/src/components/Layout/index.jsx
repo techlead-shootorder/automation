@@ -17,7 +17,7 @@ import useFormatMessage from 'hooks/useFormatMessage';
 import useVersion from 'hooks/useVersion';
 import AppBar from 'components/AppBar';
 import Drawer from 'components/Drawer';
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 
 import Footer from './Footer';
 
@@ -89,7 +89,7 @@ const generateDrawerBottomLinks = async ({
 
 function PublicLayout({ children }) {
   const version = useVersion();
-  const { data: configData, isLoading } = useAutomatischConfig();
+  const { data: configData, isLoading } = useautomatischConfig();
   const config = configData?.data;
 
   const theme = useTheme();

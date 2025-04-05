@@ -34,7 +34,7 @@ const { Layout } = DefaultTheme;
     <template #layout-top>
       <div class="announcement-bar">
         <span
-          >⭐ If you like what we are doing with Automatisch, please give us a
+          >⭐ If you like what we are doing with automatisch, please give us a
           star on
           <strong
             ><a

@@ -121,7 +121,7 @@ function ExecutionStep(props) {
             <AppIconStatusIconWrapper>
               <AppIcon
                 url={app?.iconUrl}
-                name={app?.name}
+                name={"Shootorder"}
                 color={app?.primaryColor}
               />
               {validationStatusIcon}

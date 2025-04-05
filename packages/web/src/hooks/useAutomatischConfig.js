@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import api from 'helpers/api';
 
-export default function useAutomatischConfig() {
+export default function useautomatischConfig() {
   const query = useQuery({
     queryKey: ['automatisch', 'config'],
     queryFn: async ({ signal }) => {

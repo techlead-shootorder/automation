@@ -1,4 +1,4 @@
-name: Automatisch Backend Tests
+name: automatisch Backend Tests
 on:
   push:
     branches:

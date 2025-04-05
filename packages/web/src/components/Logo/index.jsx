@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import CustomLogo from 'components/CustomLogo/index.ee';
 import DefaultLogo from 'components/DefaultLogo';
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 
 const Logo = () => {
-  const { data: configData, isLoading } = useAutomatischConfig();
+  const { data: configData, isLoading } = useautomatischConfig();
   const config = configData?.data;
   const logoSvgData = config?.logoSvgData;
 

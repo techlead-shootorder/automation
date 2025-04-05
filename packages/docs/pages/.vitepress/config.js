@@ -11,13 +11,13 @@ const PROD_BASE_URL = 'https://automatisch.io/docs';
 export default defineConfig({
   base: BASE,
   lang: 'en-US',
-  title: 'Automatisch Docs',
+  title: 'automatisch Docs',
   description:
     'Build workflow automation without spending time and money. No code is required.',
   cleanUrls: 'with-subfolders',
   ignoreDeadLinks: true,
   themeConfig: {
-    siteTitle: 'Automatisch',
+    siteTitle: 'automatisch',
     nav: [
       {
         text: 'Guide',
@@ -710,7 +710,7 @@ export default defineConfig({
           collapsible: true,
           items: [
             {
-              text: 'What is Automatisch?',
+              text: 'What is automatisch?',
               link: '/',
               activeMatch: '/',
             },
@@ -812,7 +812,7 @@ export default defineConfig({
       text: 'Edit this page on GitHub',
     },
     footer: {
-      copyright: 'Copyright © 2022 Automatisch. All rights reserved.',
+      copyright: 'Copyright © 2022 automatisch. All rights reserved.',
     },
     algolia: {
       appId: 'I7I8MRYC3P',

@@ -7,7 +7,7 @@ import * as license from '../../../../helpers/license.ee.js';
 import appConfig from '../../../../config/app.js';
 
 describe('GET /api/v1/automatisch/config', () => {
-  it('should return Automatisch config along with static config', async () => {
+  it('should return automatisch config along with static config', async () => {
     vi.spyOn(license, 'hasValidLicense').mockResolvedValue(true);
     vi.spyOn(appConfig, 'disableNotificationsPage', 'get').mockReturnValue(
       true

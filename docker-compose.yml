@@ -1,6 +1,6 @@
-version: '3.9'
 services:
   main:
+    image: automation-main
     build:
       context: ./docker
       dockerfile: Dockerfile.compose
@@ -27,7 +27,10 @@ services:
       - APP_SECRET_KEY
     volumes:
       - automatisch_storage:/automatisch/storage
+    networks:
+      - automation-network
   worker:
+    image: automation-worker
     build:
       context: ./docker
       dockerfile: Dockerfile.compose
@@ -47,6 +50,8 @@ services:
       - WORKER=true
     volumes:
       - automatisch_storage:/automatisch/storage
+    networks:
+      - automation-network
   postgres:
     image: 'postgres:14.5'
     environment:
@@ -60,11 +65,18 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - automation-network
   redis:
-    image: 'redis:7.0.4'
+    image: 'redis:7.2'
     volumes:
       - redis_data:/data
+    networks:
+      - automation-network
 volumes:
   automatisch_storage:
   postgres_data:
   redis_data:
+networks:
+  automation-network:
+    driver: bridge

@@ -12,7 +12,7 @@ export const fields = [
     key: 'assignedTo',
     type: 'string',
     required: false,
-    description: 'Default is the id of the account connected to Automatisch.',
+    description: 'Default is the id of the account connected to automatisch.',
     variables: true,
   },
   {

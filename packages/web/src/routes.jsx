@@ -27,14 +27,14 @@ import * as URLS from 'config/urls';
 import settingsRoutes from './settingsRoutes';
 import adminSettingsRoutes from './adminSettingsRoutes';
 import Notifications from 'pages/Notifications';
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 import useAuthentication from 'hooks/useAuthentication';
-import useAutomatischInfo from 'hooks/useAutomatischInfo';
+import useautomatischInfo from 'hooks/useautomatischInfo';
 import Installation from 'pages/Installation';
 
 function Routes() {
-  const { data: automatischInfo, isSuccess } = useAutomatischInfo();
-  const { data: configData } = useAutomatischConfig();
+  const { data: automatischInfo, isSuccess } = useautomatischInfo();
+  const { data: configData } = useautomatischConfig();
   const { isAuthenticated } = useAuthentication();
   const config = configData?.data;
 

@@ -5,8 +5,8 @@ import clone from 'lodash/clone';
 import set from 'lodash/set';
 import * as React from 'react';
 
-import useAutomatischInfo from 'hooks/useAutomatischInfo';
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischInfo from 'hooks/useautomatischInfo';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 import { defaultTheme, mationTheme } from 'styles/theme';
 
 const overrideIfGiven = (theme, key, value) => {
@@ -53,24 +53,24 @@ const customizeTheme = (theme, config) => {
 };
 
 const ThemeProvider = ({ children, ...props }) => {
-  const { data: automatischInfo, isPending: isAutomatischInfoPending } =
-    useAutomatischInfo();
+  const { data: automatischInfo, isPending: isautomatischInfoPending } =
+    useautomatischInfo();
   const isMation = automatischInfo?.data.isMation;
-  const { data: configData, isLoading: configLoading } = useAutomatischConfig();
+  const { data: configData, isLoading: configLoading } = useautomatischConfig();
   const config = configData?.data;
 
   const customTheme = React.useMemo(() => {
     const installationTheme = isMation ? mationTheme : defaultTheme;
 
-    if (configLoading || isAutomatischInfoPending) return installationTheme;
+    if (configLoading || isautomatischInfoPending) return installationTheme;
 
     const customTheme = customizeTheme(installationTheme, config || {});
 
     return customTheme;
-  }, [configLoading, config, isMation, isAutomatischInfoPending]);
+  }, [configLoading, config, isMation, isautomatischInfoPending]);
 
   // TODO: maybe a global loading state for the custom theme?
-  if (isAutomatischInfoPending || configLoading) return <></>;
+  if (isautomatischInfoPending || configLoading) return <></>;
 
   return (
     <BaseThemeProvider theme={customTheme} {...props}>

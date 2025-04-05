@@ -1,4 +1,4 @@
-name: Automatisch UI Tests
+name: automatisch UI Tests
 on:
   push:
     branches:
@@ -87,7 +87,7 @@ jobs:
         run: yarn playwright install --with-deps
         working-directory: ./packages/e2e-tests
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-      - name: Build Automatisch web
+      - name: Build automatisch web
         run: yarn build
         env:
           # Keep this until we clean up warnings in build processes
@@ -115,10 +115,10 @@ jobs:
       - name: Run local license server
         working-directory: ./packages/e2e-tests
         run: sudo yarn start-mock-license-server &
-      - name: Run Automatisch
+      - name: Run automatisch
         run: yarn start &
         working-directory: ./packages/backend
-      - name: Run Automatisch worker
+      - name: Run automatisch worker
         run: yarn start:worker &
         working-directory: ./packages/backend
       - name: Setup upterm session

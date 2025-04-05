@@ -3,7 +3,7 @@ import request from 'supertest';
 import app from '../../../../app.js';
 
 describe('GET /api/v1/automatisch/version', () => {
-  it('should return Automatisch version', async () => {
+  it('should return automatisch version', async () => {
     const response = await request(app)
       .get('/api/v1/automatisch/version')
       .expect(200);

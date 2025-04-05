@@ -1,4 +1,4 @@
-name: Automatisch CI
+name: automatisch CI
 on:
   push:
     branches:

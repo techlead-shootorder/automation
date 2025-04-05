@@ -13,14 +13,14 @@ import * as URLS from 'config/urls';
 import useFormatMessage from 'hooks/useFormatMessage';
 import useAdminTemplates from 'hooks/useAdminTemplates.ee';
 import useAdminUpdateConfig from 'hooks/useAdminUpdateConfig';
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 import NoResultFound from 'components/NoResultFound';
 
 function AdminTemplates() {
   const formatMessage = useFormatMessage();
   const [templateName, setTemplateName] = React.useState('');
 
-  const { data: config } = useAutomatischConfig();
+  const { data: config } = useautomatischConfig();
 
   const { data: templates, isLoading: isTemplatesLoading } = useAdminTemplates({
     name: templateName,

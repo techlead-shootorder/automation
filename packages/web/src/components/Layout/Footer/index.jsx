@@ -6,7 +6,7 @@ import Stack from '@mui/material/Stack';
 import SvgIcon from '@mui/material/SvgIcon';
 import Typography from '@mui/material/Typography';
 
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 import useFormatMessage from 'hooks/useFormatMessage';
 import useVersion from 'hooks/useVersion';
 
@@ -16,7 +16,7 @@ const LogoImage = styled('img')(() => ({
 }));
 
 const LayoutFooter = () => {
-  const { data: config, isPending: isConfigPending } = useAutomatischConfig();
+  const { data: config, isPending: isConfigPending } = useautomatischConfig();
   const formatMessage = useFormatMessage();
 
   if (config?.data.enableFooter !== true) return null;

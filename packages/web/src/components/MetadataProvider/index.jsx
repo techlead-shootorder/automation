@@ -1,14 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 
-import useAutomatischConfig from 'hooks/useAutomatischConfig';
+import useautomatischConfig from 'hooks/useautomatischConfig';
 
 const MetadataProvider = ({ children }) => {
-  const { data: configData } = useAutomatischConfig();
+  const { data: configData } = useautomatischConfig();
   const config = configData?.data;
 
   React.useEffect(() => {
-    document.title = config?.title || 'Automatisch';
+    document.title = config?.title || 'automatisch';
   }, [config?.title]);
 
   React.useEffect(() => {

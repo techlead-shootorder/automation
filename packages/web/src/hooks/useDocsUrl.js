@@ -1,4 +1,4 @@
-import useAutomatischInfo from 'hooks/useAutomatischInfo';
+import useautomatischInfo from 'hooks/useautomatischInfo';
 
 const appendTrailingSlash = (url) => {
   if (!url) {
@@ -17,7 +17,7 @@ const appendTrailingSlash = (url) => {
  * The given DOCS_URL is made sure to have a trailing slash to have relative paths work as expected.
  */
 export default function useDocsUrl(path) {
-  const { data: automatischInfo } = useAutomatischInfo();
+  const { data: automatischInfo } = useautomatischInfo();
   const docsUrlWithTrailingSlash = appendTrailingSlash(automatischInfo?.docsUrl);
   const docsUrl = docsUrlWithTrailingSlash || 'https://automatisch.io/docs/';
 

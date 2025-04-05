@@ -46,12 +46,12 @@ services:
       - KC_DB_PASSWORD=automatisch_password
       - KC_HEALTH_ENABLED=true
     ports:
-      - "8080:8080"
+      - '8080:8080'
     command: start-dev
     depends_on:
       - postgres
     healthcheck:
-      test: "curl -f http://localhost:8080/health/ready || exit 1"
+      test: 'curl -f http://localhost:8080/health/ready || exit 1'
     volumes:
       - keycloak:/opt/keycloak/data/
     expose:

@@ -21,7 +21,7 @@ describe('PATCH /api/v1/admin/config', () => {
   });
 
   it('should return updated config', async () => {
-    const title = 'Test environment - Automatisch';
+    const title = 'Test environment - automatisch';
     const palettePrimaryMain = '#00adef';
     const palettePrimaryDark = '#222222';
     const palettePrimaryLight = '#f90707';

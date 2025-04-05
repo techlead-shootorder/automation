@@ -5,7 +5,7 @@ import licenseMock from '../../../../../test/mocks/rest/api/v1/automatisch/licen
 import * as license from '../../../../helpers/license.ee.js';
 
 describe('GET /api/v1/automatisch/license', () => {
-  it('should return Automatisch license info', async () => {
+  it('should return automatisch license info', async () => {
     vi.spyOn(license, 'getLicense').mockResolvedValue({
       id: '123',
       name: 'license-name',

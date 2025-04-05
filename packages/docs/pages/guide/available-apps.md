@@ -1,6 +1,6 @@
 # Available Apps
 
-The following integrations are currently supported by Automatisch.
+The following integrations are currently supported by automatisch.
 
 - [Airtable](/apps/airtable/actions)
 - [Anthropic](/apps/anthropic/actions)

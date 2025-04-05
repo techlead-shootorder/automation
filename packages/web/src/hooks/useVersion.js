@@ -1,11 +1,11 @@
 import { compare } from 'compare-versions';
 import { useQuery } from '@tanstack/react-query';
 
-import useAutomatischNotifications from 'hooks/useAutomatischNotifications';
+import useautomatischNotifications from 'hooks/useautomatischNotifications';
 import api from 'helpers/api';
 
 export default function useVersion() {
-  const { data: notificationsData } = useAutomatischNotifications();
+  const { data: notificationsData } = useautomatischNotifications();
   const { data } = useQuery({
     queryKey: ['automatisch', 'version'],
     queryFn: async ({ signal }) => {

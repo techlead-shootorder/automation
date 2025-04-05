@@ -1,6 +1,6 @@
 # Development Setup
 
-Clone main branch of Automatisch.
+Clone main branch of automatisch.
 
 ```bash
 git clone git@github.com:automatisch/automatisch.git
@@ -26,7 +26,7 @@ yarn install
 Make sure that you have **PostgreSQL** and **Redis** installed and running.
 
 :::warning
-Scripts we have prepared for Automatisch work with PostgreSQL version 14. If you have a different version, you might have some problems with the database setup.
+Scripts we have prepared for automatisch work with PostgreSQL version 14. If you have a different version, you might have some problems with the database setup.
 :::
 
 Create a `.env` file in the backend package:

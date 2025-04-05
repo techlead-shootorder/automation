@@ -7,15 +7,15 @@ import Container from 'components/Container';
 import NotificationCard from 'components/NotificationCard';
 import PageTitle from 'components/PageTitle';
 import * as URLS from 'config/urls';
-import useAutomatischInfo from 'hooks/useAutomatischInfo';
+import useautomatischInfo from 'hooks/useautomatischInfo';
 import useFormatMessage from 'hooks/useFormatMessage';
-import useAutomatischNotifications from 'hooks/useAutomatischNotifications';
+import useautomatischNotifications from 'hooks/useautomatischNotifications';
 
 export default function Updates() {
   const navigate = useNavigate();
   const formatMessage = useFormatMessage();
-  const { data: notificationsData } = useAutomatischNotifications();
-  const { data: automatischInfo, isPending } = useAutomatischInfo();
+  const { data: notificationsData } = useautomatischNotifications();
+  const { data: automatischInfo, isPending } = useautomatischInfo();
   const isMation = automatischInfo?.data.isMation;
   const notifications = notificationsData?.data || [];
 

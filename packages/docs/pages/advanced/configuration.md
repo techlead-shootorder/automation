@@ -19,7 +19,7 @@ Please be careful with the `ENCRYPTION_KEY` and `WEBHOOK_SECRET_KEY` environment
 | `HOST`                       | string  | `localhost`        | HTTP Host                                                                           |
 | `PROTOCOL`                   | string  | `http`             | HTTP Protocol                                                                       |
 | `PORT`                       | string  | `3000`             | HTTP Port                                                                           |
-| `APP_ENV`                    | string  | `production`       | Automatisch Environment                                                             |
+| `APP_ENV`                    | string  | `production`       | automatisch Environment                                                             |
 | `WEB_APP_URL`                | string  |                    | Can be used to override connection URLs and CORS URL                                |
 | `WEBHOOK_URL`                | string  |                    | Can be used to override webhook URL                                                 |
 | `LOG_LEVEL`                  | string  | `info`             | Can be used to configure log level such as `error`, `warn`, `info`, `http`, `debug` |
